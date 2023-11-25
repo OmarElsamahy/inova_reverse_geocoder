@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require 'bundler/setup'
 require "inova_reverse_geocoder"
+require 'net/http'
+require 'json'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
