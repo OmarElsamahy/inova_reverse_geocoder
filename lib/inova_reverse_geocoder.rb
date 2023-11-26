@@ -6,7 +6,7 @@ module InovaReverseGeocoder
   class Error < StandardError; end
     attr_accessor :lat, :long, :locale, :data, :distrcit, :city, :country, :address_components, :full_address, :results
 
-    class InovaReverseGeocoder
+    class Geo
       def initialize(lat: 0, long: 0, locale: "en", api_key: nil)
         @lat = lat
         @long = long
