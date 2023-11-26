@@ -14,7 +14,7 @@ require 'net/http'
 
   describe '#execute' do
     it 'fetches and parses data' do
-      geocoder = InovaReverseGeocoder::Geo.new(lat: 37.7749, long: 22.4194, locale: 'en',api_key: "AIzaSyB4SC3qiSILoIFkio1PUiUh9wUIjX9vfYc")
+      geocoder = InovaReverseGeocoder::Geo.new(lat: 37.7749, long: 22.4194, locale: 'en',api_key: "")
       geocoder.execute
       puts geocoder
       puts geocoder.full_address
