@@ -2,28 +2,77 @@ PATH
   remote: .
   specs:
     inova_reverse_geocoder (0.1.0)
+      json (>= 2.5, < 3.0)
       net-http
+      rails (>= 6.1.7)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (7.1.2)
-      actionview (= 7.1.2)
-      activesupport (= 7.1.2)
+    actioncable (7.1.1)
+      actionpack (= 7.1.1)
+      activesupport (= 7.1.1)
+      nio4r (~> 2.0)
+      websocket-driver (>= 0.6.1)
+      zeitwerk (~> 2.6)
+    actionmailbox (7.1.1)
+      actionpack (= 7.1.1)
+      activejob (= 7.1.1)
+      activerecord (= 7.1.1)
+      activestorage (= 7.1.1)
+      activesupport (= 7.1.1)
+      mail (>= 2.7.1)
+      net-imap
+      net-pop
+      net-smtp
+    actionmailer (7.1.1)
+      actionpack (= 7.1.1)
+      actionview (= 7.1.1)
+      activejob (= 7.1.1)
+      activesupport (= 7.1.1)
+      mail (~> 2.5, >= 2.5.4)
+      net-imap
+      net-pop
+      net-smtp
+      rails-dom-testing (~> 2.2)
+    actionpack (7.1.1)
+      actionview (= 7.1.1)
+      activesupport (= 7.1.1)
       nokogiri (>= 1.8.5)
-      racc
       rack (>= 2.2.4)
       rack-session (>= 1.0.1)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    actionview (7.1.2)
-      activesupport (= 7.1.2)
+    actiontext (7.1.1)
+      actionpack (= 7.1.1)
+      activerecord (= 7.1.1)
+      activestorage (= 7.1.1)
+      activesupport (= 7.1.1)
+      globalid (>= 0.6.0)
+      nokogiri (>= 1.8.5)
+    actionview (7.1.1)
+      activesupport (= 7.1.1)
       builder (~> 3.1)
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    activesupport (7.1.2)
+    activejob (7.1.1)
+      activesupport (= 7.1.1)
+      globalid (>= 0.3.6)
+    activemodel (7.1.1)
+      activesupport (= 7.1.1)
+    activerecord (7.1.1)
+      activemodel (= 7.1.1)
+      activesupport (= 7.1.1)
+      timeout (>= 0.4.0)
+    activestorage (7.1.1)
+      actionpack (= 7.1.1)
+      activejob (= 7.1.1)
+      activerecord (= 7.1.1)
+      activesupport (= 7.1.1)
+      marcel (~> 1.0)
+    activesupport (7.1.1)
       base64
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -40,14 +89,14 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
+    date (3.3.3)
     diff-lcs (1.5.0)
     dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
+    globalid (1.2.1)
+      activesupport (>= 6.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -59,13 +108,28 @@ GEM
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
+    mail (2.8.1)
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
+    marcel (1.0.2)
+    mini_mime (1.1.5)
     minitest (5.20.0)
     mutex_m (0.2.0)
     net-http (0.2.0)
       net-protocol
       uri
+    net-imap (0.4.1)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
     net-protocol (0.2.1)
       timeout
+    net-smtp (0.4.0)
+      net-protocol
+    nio4r (2.5.9)
     nokogiri (1.15.5-arm64-darwin)
       racc (~> 1.4)
     parallel (1.23.0)
@@ -83,6 +147,20 @@ GEM
     rackup (2.1.0)
       rack (>= 3)
       webrick (~> 1.8)
+    rails (7.1.1)
+      actioncable (= 7.1.1)
+      actionmailbox (= 7.1.1)
+      actionmailer (= 7.1.1)
+      actionpack (= 7.1.1)
+      actiontext (= 7.1.1)
+      actionview (= 7.1.1)
+      activejob (= 7.1.1)
+      activemodel (= 7.1.1)
+      activerecord (= 7.1.1)
+      activestorage (= 7.1.1)
+      activesupport (= 7.1.1)
+      bundler (>= 1.15.0)
+      railties (= 7.1.1)
     rails-dom-testing (2.2.0)
       activesupport (>= 5.0.0)
       minitest
@@ -90,9 +168,9 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
-    railties (7.1.2)
-      actionpack (= 7.1.2)
-      activesupport (= 7.1.2)
+    railties (7.1.1)
+      actionpack (= 7.1.1)
+      activesupport (= 7.1.1)
       irb
       rackup (>= 1.0.0)
       rake (>= 12.2)
@@ -142,13 +220,16 @@ GEM
     unicode-display_width (2.5.0)
     uri (0.11.0)
     webrick (1.8.1)
+    websocket-driver (0.7.6)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.5)
     zeitwerk (2.6.12)
 
 PLATFORMS
   arm64-darwin-23
 
 DEPENDENCIES
-  dotenv-rails
+  dotenv
   inova_reverse_geocoder!
   rake (~> 13.0)
   rspec (~> 3.0)
